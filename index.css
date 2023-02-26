@@ -1,0 +1,236 @@
+/* use body as flex to make our todolist app center aligned always */
+body{ 
+    display: flex;
+    justify-content: center;
+}
+/* this main-container will be as home body for our todolist app */
+.main-container{
+    height: auto;
+    width: 50%;
+    background-color: rgb(192, 190, 190);
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*this is our main part and all the elements in it arrannged as in column manner  */
+.container{
+    width: 90%;
+    height: auto;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* we are controller the width of main-container for the lower pixcel devices and all below fill fallow the same convention according to it */
+@media (max-width:1024px){
+    .main-container{
+        width: 100%;
+    }
+}
+/* div is all sub parts in container to be as difference we just keeping width 10% lower the container */
+.div{
+    width: 90%;
+}
+
+.div1{
+    border-bottom: 1px solid rgb(215, 213, 213); /* this will make a difference between input and list items*/
+}
+
+.div1-item1{  
+    background-color: rgb(187, 183, 183);
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+#add{
+    height: 80px;
+    width: 80%;
+    font-size: 140%;
+    border: none;  /*we removed all default styles for good user experience*/
+    outline: none;
+    background-color: rgb(187, 183, 183);
+}
+
+@media (max-width:500px){  /*managing the size of the input box for lower size devices*/
+    #add{
+        width: 70%;
+    }
+    .container{
+        width: 98%;
+    }
+    .div2 .div3{
+        width: 100%;
+    }
+}
+
+.page-f-icon{   /*this is our page icon*/
+    margin-left: 2%;
+    font-size: 140%;
+    margin-right: 1%;
+}
+
+#page-l-icon{  /*this is our plus/add button */
+    margin-left: 5%;
+    font-size: 140%;
+}
+
+.div1-item2{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+  
+.check-pos{
+    position: absolute;  /*to be use ticks one on another we make it as absolute*/
+    margin-left: 5px;
+}
+
+.tick-icon{
+    font-size: 20px;
+    color: grey;
+}
+
+.m-left{
+    color: grey;
+}
+
+#m-right{
+    color: grey;
+}
+
+
+.div3{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.div3 button{
+    border: none;
+    background-color: white;
+}
+
+.grey-color{
+    color: grey;
+}
+
+#list{
+    list-style-type: none;  /*un-ordered list default styles are removed */
+}
+
+#list li{
+    width: 100%;
+    height: auto;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 80%; */
+    /* justify-content: space-between; */
+}
+
+#list li div{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+ul {
+  width: 95%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+li:not(:first-child) {  /*indent the text of all li elements that are not the first child by 1em.*/
+  text-indent: 1em;
+}
+  
+
+#list li img{
+    margin-right: 30px;
+    height: 15px;
+    width: 15px;
+}
+
+@media (min-width:500px){ /*make the delete button availble only when hovering though the list for the devices above 500px*/
+
+
+    
+    li img.delete {
+        display: none; /* Hide the image by default */
+    }
+    
+    li:hover img.delete {
+        display: inline-block; /* Show the image when hovering over the list item */
+    }
+}
+
+
+@media (max-width : 425px){  /* managing our list for lowe pixels devices*/
+    
+    #list li{
+        margin-right: 100px;
+        font-size: 20px;
+    }
+
+    #list span{
+        margin-left: 0px;
+    }
+
+    #list li img{
+        margin-right: 5px;
+    }
+}
+
+.deleted-all-tasks{
+    color: grey;
+}
+
+#hover-red:hover{
+    color: red;
+}
+
+.clear-completed-tasks{
+    color: grey;
+}
+
+.clear-completed-tasks:hover{
+    color: red;
+}
+
+#hover-blue{
+    color: grey;
+}
+
+#hover-blue:hover{
+    color: blue;
+}
+
+#btns{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (max-width:500px){
+    #btns{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+}

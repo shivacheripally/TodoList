@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css" type="text/css">
+    <script src="https://kit.fontawesome.com/e79f1189be.js" crossorigin="anonymous"></script>
+    <title>TodoList</title>
+</head>
+<body>
+    
+    <div class="main-container">  
+        <h1>TodoList App</h1>
+        <div class="container">
+            <div class="div div1">
+                <!-- this div is for input box -->
+                <div class="div1-item1">
+                    <span class="page-f-icon"><i class="fa-solid fa-file-lines"></i></span>
+                    <input type="text" placeholder="Type Your TodoList" id="add">
+                    <span><i class="fa-sharp fa-solid fa-circle-plus" id="page-l-icon"></i></span>
+                </div>
+                <!-- we are using some important button events in this box -->
+                <div class="div1-item2">
+                    <span class="m-left"><i class="fa-solid fa-check check-pos tick-icon"></i><i class="fa-solid fa-check tick-icon"></i> &nbsp;<span class="Complete-All-Tasks" id="hover-red">Complete All Tasks</span></span>
+                    <span class="deleted-all-tasks" id="hover-red">Delete All Tasks</span>
+                    <span class="clear-completed-tasks">Clear Completed</span>
+                </div>
+            </div>
+            <!-- in this box we are making out list items visible according to user controll -->
+            <div class="div div2">
+                <ul id="list">
+                    <!-- <li>
+                        <input type="checkbox" id="${task.id}" data-id="12" class="custom-checkbox">
+                        <label for="task1">Buy Groceries</label>
+                        <img src="bin.scg" alt="">
+                    </li> -->
+                    
+                </ul>
+            </div>
+
+            <!-- count of list's and some more buttons are added in this box -->
+            <div class="div div3">
+                <span class="m-left"><span id="tasks-counter">0</span id="total-tasks"> Tasks Left</span>
+                <span class="m-right" id="btns"><button class="all" id="hover-blue">All</button><button class="un-completed" id="hover-blue">Uncompleted</button><button class="completed" id="hover-blue">Completed</button></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- usage of external javascript file -->
+    <script type="text/javascript" src="index.js"></script>  
+</body>
+</html>
