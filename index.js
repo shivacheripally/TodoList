@@ -3,6 +3,7 @@ let tasksList = document.getElementById('list');
 const addTaskInput = document.getElementById('add');
 const tasksCounter = document.getElementById('tasks-counter');
 
+//create new link and add it into the DOM
 function addTaskToDom(task){
     const li = document.createElement('li');
     // console.log("add task to dom : ",task.text);
