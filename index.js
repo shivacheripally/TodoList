@@ -10,8 +10,10 @@ function addTaskToDom(task){
 
     li.innerHTML = 
     
-    `<div><input type="checkbox" id="${task.id}" ${task.done ? 'checked' : ''} class="custom-checkbox">
-    <label for="${task.id} id = "text-data">${task.text}</label></div>
+    `<div>
+        <input type="checkbox" id="${task.id}" ${task.done ? 'checked' : ''} class="custom-checkbox">
+        <label for="${task.id}" id="text-data" style="${task.done ? 'text-decoration: line-through;' : ''}">${task.text}</label>  // Based on status of task.done we make changes to the text
+    </div>
     <img src="trash-can-solid.svg" class="delete" data-id="${task.id}" />`;
 
     tasksList.append(li);
