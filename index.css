@@ -56,6 +56,14 @@ body{
     background-color: rgb(187, 183, 183);
 }
 
+#add:hover{
+    background-color: aliceblue;
+}
+
+.div1-item1:hover{
+    background-color: aliceblue;
+}
+
 @media (max-width:500px){  /*managing the size of the input box for lower size devices*/
     #add{
         width: 70%;
@@ -168,7 +176,7 @@ li:not(:first-child) {  /*indent the text of all li elements that are not the fi
 
 @media (min-width:500px){ /*make the delete button availble only when hovering though the list for the devices above 500px*/
 
-
+    
     
     li img.delete {
         display: none; /* Hide the image by default */
@@ -181,6 +189,10 @@ li:not(:first-child) {  /*indent the text of all li elements that are not the fi
 
 
 @media (max-width : 425px){  /* managing our list for lowe pixels devices*/
+    
+    .main-container{
+        margin-top: 0px;
+    }
     
     #list li{
         margin-right: 100px;
