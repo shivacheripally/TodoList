@@ -64,6 +64,10 @@ body{
     background-color: aliceblue;
 }
 
+.div1-item2 span{
+    text-align: center;
+}
+
 @media (max-width:500px){  /*managing the size of the input box for lower size devices*/
     
     .div1-item2>span{
